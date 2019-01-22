@@ -10,6 +10,7 @@ Simulate reflection and refraction of light.
 - View real images, virtual images and virtual objects directly
 - View images that can be observed from some given position
 - Distance and angular measurement
+- Russian language
 
 ## Links
 - [Project Page](https://ricktu288.github.io/ray-optics/)
