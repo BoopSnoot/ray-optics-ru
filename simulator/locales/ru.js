@@ -190,7 +190,7 @@ locales["ru"] = {
     "message": "Открыть"
   },
   "lockobjs": {
-    "message": "Заблокировать объекты"
+    "message": "\uD83D\uDD12"
   },
   "showgrid": {
     "message": "Сетка"
