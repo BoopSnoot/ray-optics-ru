@@ -65,6 +65,20 @@
  </div>
 </header>
 <div class="container">
+	<div style="float: right;">
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+				<span id="language">Language</span>
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a href="#" onclick="setLang('en');event.preventDefault();">English</a></li>
+				<li><a href="#" onclick="setLang('zh-TW');event.preventDefault();">正體中文</a></li>
+				<li><a href="#" onclick="setLang('zh-CN');event.preventDefault();">简体中文</a></li>
+				<li><a href="#" onclick="setLang('ru');event.preventDefault();">Русский</a></li>
+			</ul>
+		</div>
+	</div>
   <center>
     <h1><b><span id="title">Ray Optics Simulation</span></b></h1>
     <p id="description">
@@ -76,19 +90,6 @@
       <a href="https://github.com/ricktu288/ray-optics" class="btn btn-primary btn-lg" id="github_link">View on GitHub</a>
       <a href="simulator_old/index.html" target="_blank" class="btn btn-info btn-lg" id="start-old">Mobile Version</a>
     </p>
-    <div style="float: right;">
-    <div class="dropdown">
-      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-      <span id="language">Language</span>
-      <span class="caret"></span></button>
-      <ul class="dropdown-menu">
-        <li><a href="#" onclick="setLang('en');event.preventDefault();">English</a></li>
-        <li><a href="#" onclick="setLang('zh-TW');event.preventDefault();">正體中文</a></li>
-        <li><a href="#" onclick="setLang('zh-CN');event.preventDefault();">简体中文</a></li>
-	<li><a href="#" onclick="setLang('ru');event.preventDefault();">Русский</a></li>
-      </ul>
-    </div>
-  </div>
   </center>
   <br>
   <div id="screenshots" class="carousel slide" data-ride="carousel">
