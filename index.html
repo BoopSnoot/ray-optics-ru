@@ -62,7 +62,7 @@
         <li><a href="#" onclick="setLang('en');event.preventDefault();">English</a></li>
         <li><a href="#" onclick="setLang('zh-TW');event.preventDefault();">正體中文</a></li>
         <li><a href="#" onclick="setLang('zh-CN');event.preventDefault();">简体中文</a></li>
-		<li><a href="#" onclick="setLang('ru');event.preventDefault();">Русский</a></li>
+	<li><a href="#" onclick="setLang('ru');event.preventDefault();">Русский</a></li>
       </ul>
     </div>
   </div>
@@ -318,14 +318,14 @@ function setLang(lang) {
   document.body.style.fontFamily = locales[lang].font.message;
   document.title = locales[lang]["page_title"].message;
   if (lang != default_lang) {
-    document.getElementById('start').href = 'simulator/index.html?' + lang;
+    document.getElementById('start').href = 'simulator//?' + lang;
   } else {
-    document.getElementById('start').href = 'simulator/index.html';
+    document.getElementById('start').href = 'simulator/';
   }
   if (lang != default_lang) {
-    document.getElementById('start-old').href = 'simulator_old/index.html?' + lang;
+    document.getElementById('start-old').href = 'simulator_old//?' + lang;
   } else {
-    document.getElementById('start-old').href = 'simulator_old/index.html';
+    document.getElementById('start-old').href = 'simulator_old/';
   }
   for (item in locales[lang]) {
     if (document.getElementById(item)) {
