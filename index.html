@@ -1,16 +1,17 @@
 ﻿ <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-height, initial-scale=1">
 		<title>Ray Optics Simulation</title>
 		<meta property="og:title" content="Ray Optics Simulation">
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="https://ricktu288.github.io/ray-optics/">
 		<meta property="og:image" content="https://ricktu288.github.io/ray-optics/image.png">
 		<meta property="og:description" content="An open-source web app to simulate reflection and refraction of light.">
-		<link rel="stylesheet" href="../style/w3.css">
+		<link rel="stylesheet" href="http://boopsnoot.xyz/style/w3.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="icon" href="icon128.png" type="image/png">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -30,24 +31,24 @@
 			}
 			.tool-title {
 				font-size: 16pt;
-				margin-top: 0px;
-				margin-bottom: 0px;
+				margin-top: 0;
+				margin-bottom: 0;
 			}
 
 			.mode-title {
 				font-size: 16pt;
-				margin-top: 0px;
-				margin-bottom: 0px;
+				margin-top: 0;
+				margin-bottom: 0;
 			}
 		</style>
 	</head>
 	<body>
 		<header class=" w3-card-2 headerme w3-yellow">
-			<h1>La Repository De La Dime</h1>
+			<h1 id="header-name">La Repository De La Dime</h1>
 			<div class="w3-bar w3-yellow w3-mobile">
-				<a href="../index.html" class="w3-bar-item w3-button w3-hover-orange">Home</a>
-				<a href="../list" class="w3-bar-item w3-button w3-hover-orange">Programs</a>
-				<a href="../ball" class="w3-bar-item w3-button w3-hover-orange">Ball Thingamabobber&trade;</a>
+				<a href="http://boopsnoot.xyz/" class="w3-bar-item w3-button w3-hover-orange">Home</a>
+				<a href="http://boopsnoot.xyz/list" class="w3-bar-item w3-button w3-hover-orange">Programs</a>
+				<a href="http://boopsnoot.xyz/ball" class="w3-bar-item w3-button w3-hover-orange">Ball Thingamabobber&trade;</a>
 				<a class="w3-bar-item w3-button w3-red w3-hover-orange">Ray Optics Simulation</a>
 				<a href="https://github.com/Dminin2001/" class="w3-bar-item w3-button w3-right w3-black w3-hover-orange">GitHub</a>
 			</div>
@@ -68,7 +69,7 @@
 					</ul>
 				</div>
 			</div>
-			<center>
+			<div style="text-align: center;">
 				<h1><b><span id="title">Ray Optics Simulation</span></b></h1>
 				<p id="description">
 					An open-source web application to simulate reflection and refraction of light.<br>
@@ -79,7 +80,7 @@
 					<a href="https://github.com/ricktu288/ray-optics" class="btn btn-primary btn-lg" id="github_link">View on GitHub</a>
 					<a href="simulator_old/index.html" target="_blank" class="btn btn-info btn-lg" id="start-old">Mobile Version</a>
 				</p>
-			</center>
+			</div>
 			<br>
 			<div id="screenshots" class="carousel slide" data-ride="carousel">
 				<!-- Indicators -->
@@ -230,7 +231,7 @@
 						</div>
 						<div class="row thumbnail right-caption">
 							<img src="img/ruler.png" alt="Ruler"  style="width:100px;" class="img-rounded">
-							<div class="caption" class="img-rounded">
+							<div class="caption img-rounded">
 								<p class="tool-title" id="ruler">Ruler</p>
 								<span id="ruler_desc">
 									A ruler from a point for zero and another point.
@@ -240,7 +241,7 @@
 						</div>
 						<div class="row thumbnail right-caption">
 							<img src="img/protractor.png" alt="Protractor" style="width:100px;" class="img-rounded">
-							<div class="caption" class="img-rounded">
+							<div class="caption img-rounded">
 								<p class="tool-title" id="protractor">Protractor</p>
 								<span id="protractor_desc">
 									A protractor defined from center and another point for the zero direction.
@@ -297,7 +298,7 @@
 									The rays are shown in blue, and the point(s) in orange.
 								</span>
 							</div>
-							<img src="img/seen_by_observer.png" alt="Seen by obeserver" class="img-rounded">
+							<img src="img/seen_by_observer.png" alt="Seen by observer" class="img-rounded">
 						</div>
 					</div>
 				</div>
@@ -308,22 +309,22 @@
 		<script src="locales/zh_TW.js"></script>
 		<script src="locales/ru.js"></script>
 		<script>
-			var default_lang = 'ru';
-			var browser_lang = '';
+			let default_lang = 'ru';
+			let browser_lang = '';
 			function setLang(lang) {
 				document.body.style.fontFamily = locales[lang].font.message;
 				document.title = locales[lang]["page_title"].message;
-				if (lang != default_lang) {
+				if (lang !== default_lang) {
 					document.getElementById('start').href = 'simulator//?' + lang;
 				} else {
 					document.getElementById('start').href = 'simulator//?ru';
 				}
-				if (lang != default_lang) {
+				if (lang !== default_lang) {
 					document.getElementById('start-old').href = 'simulator_old//?' + lang;
 				} else {
 					document.getElementById('start-old').href = 'simulator_old//?ru';
 				}
-				for (item in locales[lang]) {
+				for (let item in locales[lang]) {
 					if (document.getElementById(item)) {
 						document.getElementById(item).innerHTML = locales[lang][item].message;
 					}
@@ -331,10 +332,10 @@
 			}
 			if (navigator.language) {
 				browser_lang = navigator.language;
-				if (browser_lang.toLowerCase() == 'zh-tw') {
+				if (browser_lang.toLowerCase() === 'zh-tw') {
 					default_lang = 'zh-TW';
 				}
-				if (browser_lang.toLowerCase() == 'zh-cn') {
+				if (browser_lang.toLowerCase() === 'zh-cn') {
 					default_lang = 'zh-CN';
 				}
 			}
